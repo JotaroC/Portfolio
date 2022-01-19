@@ -1,19 +1,13 @@
+/* Set variables that will be used multible times*/
 :root {
     --font-family: "Roboto", sans-serf;
-    --normal-font: 400;
-    --bold-font: 700;
-    --bolder-font: 900;
     --bg-color: #fcfcfc;
-    --primary-color: #4756df;
-    --secondary-color: #ff7235;
     --primary-shadow: #8b8eaf;
-    --secondary-shadow: #a17a69;
     --bottom-margin: 0.5rem;
-    --bottom-margin-2: 1rem;
     --line-height: 1.7rem;
-    --transition: 0.3s;
 }
 
+/* Let the scroll be smooth */
 html {
     scroll-behavior: smooth;
 }
@@ -22,6 +16,8 @@ body {
     font-family: var(--font-family);
 }
 
+/* Define the properties of header link
+    position, font and color*/
 nav.nav-link {
     position:fixed;
     top: 0;
@@ -42,7 +38,7 @@ header ul li{
     margin-right: 25px;
 }
 
-
+/* Define the position of big image and About me section */
 .hero {
     display: flex;
     align-items: center;
@@ -52,6 +48,7 @@ header ul li{
     margin: auto;
 }
 
+/* Image size and position */
 .hero img {
     margin-top: 10rem;
     margin-left: -40rem ;
@@ -59,6 +56,7 @@ header ul li{
     width: 50.5rem;
 }
 
+/* Define the size, position and the box-shadow of About me section */
 .bio {
     width: 55rem;
     padding: 0.625rem;
@@ -67,37 +65,43 @@ header ul li{
     box-shadow: 0 2px 15px 2px var(--primary-shadow);
 }
 
+/* The title -- About Me */
 .bio h1 {
     margin-bottom: var(--bottom-margin);
 }
-  
+
+/* The text in About Me*/
 .bio p {
     line-height: var(--line-height);
     padding: 0.3rem 0;
 }
 
+/*  Define the background color and set position for project section */
 .projects {
     background-color: var(--bg-color);
     padding: 32px 0;
     margin-top: 2rem;
 }
 
+/* Define the position for project title */
 .projects-title {
     text-align: left;
     margin: 1rem 6.25rem;
-
 }
 
+/* project title */
 h2 {
     font-size: 180%;
     font-style: oblique;
     font-weight: 600;
 }
 
+/* contact title */
 .contact h2 {
     font-size: 100%;
 }
 
+/* Define the position for the whole project section */
 .projects-container {
     display: flex;
     flex-wrap: wrap;
@@ -111,6 +115,7 @@ h2 {
     column-gap: 2.75rem;
 }
 
+/* Define the background color, border settings and size of each project card */
 .project-card {
     background-color: #fff;
     border-radius: 11px;
@@ -120,13 +125,15 @@ h2 {
     max-height: 20rem;
 }
 
+/* Define the properties of the project image */
 .project-pic {
     float: right;
     width: 45%;
     height: 40%;
     right: 1rem;
 }
- 
+
+/* When the mouse hover on the project image, the image will become larger */
 .project-pic:hover {
     width: 50%;
     height: 45%;
@@ -136,18 +143,21 @@ h2 {
     margin-bottom: var(--bottom-margin);
 }
 
+/* project card title */
 h3 {
     font-size: 120%;
     font-style: italic;
     font-weight: 200;
 }
-  
+
+/* The text in project card */
 .project-details {
     float: left;
     margin-bottom: var(--bottom-margin);
     padding: 5rem 2rem;
 }
 
+/* Define the link of the project */
 .project-link {
     position: sticky;
     top: 5.625rem;
@@ -156,6 +166,7 @@ h3 {
     color: orange;
 }
 
+/* Define the position of the contact section at the bottom of the website */
 .contact {
     position: relative; 
     bottom: 0;
@@ -164,7 +175,7 @@ h3 {
     display: flex;
     justify-content: space-between;
     font-size: 2rem;
-    padding: 1.5rem 3.5rem;
+    padding: 1.5rem 2.5rem;
     box-shadow: 3px 3px 5px rgba(42, 49, 11, 0.274);
 }
 
@@ -172,6 +183,7 @@ h3 {
     margin: -0.5rem 1%;
 }
 
+/* Define the postion of contact information */
 .navigation li{
     display: inline-block;
     padding: 0.625rem 0.5rem;
@@ -183,6 +195,7 @@ h3 {
     font-size: 85%;
     text-decoration: none;
 }
+
 
 @media screen and (max-width: 720px) {
     /*changes reflects on screen with a width of 720px and below*/
@@ -233,14 +246,13 @@ h3 {
         position: relative;
         max-height: 10rem;
         top:0;
-        /* width: fit-content; */
         margin-bottom: 1rem;
         font-size: large;
     }
 }
 
 @media screen and (max-width: 420px) {
-
+    /*changes reflects on screen with a width of 420px and below*/
     .hero {
         margin-top: 3rem;
         margin-left: 23rem;
@@ -254,12 +266,11 @@ h3 {
   
     .bio {
         margin-top: auto;
-        width: 50rem;
+        width: auto;
     }
   
     .project-container {
-        flex-direction: column;
-        
+        flex-direction: column;  
     }
 
     .project-card {
