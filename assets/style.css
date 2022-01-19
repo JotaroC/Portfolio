@@ -1,0 +1,273 @@
+:root {
+    --font-family: "Roboto", sans-serf;
+    --normal-font: 400;
+    --bold-font: 700;
+    --bolder-font: 900;
+    --bg-color: #fcfcfc;
+    --primary-color: #4756df;
+    --secondary-color: #ff7235;
+    --primary-shadow: #8b8eaf;
+    --secondary-shadow: #a17a69;
+    --bottom-margin: 0.5rem;
+    --bottom-margin-2: 1rem;
+    --line-height: 1.7rem;
+    --transition: 0.3s;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family);
+}
+
+nav.nav-link {
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 2rem;
+    padding: 0.5rem 3.5rem;
+    background-color: var(--bg-color);
+    box-shadow: 0 3px 5px rgba(42, 49, 11, 0.274);
+} 
+
+header ul li{
+    display: inline-block;
+    margin-right: 25px;
+}
+
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10rem;
+    max-width: 30rem;
+    margin: auto;
+}
+
+.hero img {
+    margin-top: 10rem;
+    margin-left: -40rem ;
+    height: 50.5rem;
+    width: 50.5rem;
+}
+
+.bio {
+    width: 55rem;
+    padding: 0.625rem;
+    margin-right: -10rem;
+    border-radius: 6px;
+    box-shadow: 0 2px 15px 2px var(--primary-shadow);
+}
+
+.bio h1 {
+    margin-bottom: var(--bottom-margin);
+}
+  
+.bio p {
+    line-height: var(--line-height);
+    padding: 0.3rem 0;
+}
+
+.projects {
+    background-color: var(--bg-color);
+    padding: 32px 0;
+    margin-top: 2rem;
+}
+
+.projects-title {
+    text-align: left;
+    margin: 1rem 6.25rem;
+
+}
+
+h2 {
+    font-size: 180%;
+    font-style: oblique;
+    font-weight: 600;
+}
+
+.contact h2 {
+    font-size: 100%;
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    text-align: center;
+    padding: 2rem 6.25rem;
+    row-gap: 2rem;
+    column-gap: 2.75rem;
+}
+
+.project-card {
+    background-color: #fff;
+    border-radius: 11px;
+    box-shadow: 0 3px 10px var(--primary-shadow);
+    padding: 20px;
+    max-width: 40rem;
+    max-height: 20rem;
+}
+
+.project-pic {
+    float: right;
+    width: 45%;
+    height: 40%;
+    right: 1rem;
+}
+ 
+.project-pic:hover {
+    width: 50%;
+    height: 45%;
+}
+
+.project-title {
+    margin-bottom: var(--bottom-margin);
+}
+
+h3 {
+    font-size: 120%;
+    font-style: italic;
+    font-weight: 200;
+}
+  
+.project-details {
+    float: left;
+    margin-bottom: var(--bottom-margin);
+    padding: 5rem 2rem;
+}
+
+.project-link {
+    position: sticky;
+    top: 5.625rem;
+    right: 5.625rem;
+    text-decoration: none;
+    color: orange;
+}
+
+.contact {
+    position: relative; 
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    font-size: 2rem;
+    padding: 1.5rem 3.5rem;
+    box-shadow: 3px 3px 5px rgba(42, 49, 11, 0.274);
+}
+
+.contact-title {
+    margin: -0.5rem 1%;
+}
+
+.navigation li{
+    display: inline-block;
+    padding: 0.625rem 0.5rem;
+    margin-left: 10rem;
+}
+
+.navigation {
+    margin-left: 10rem;
+    font-size: 85%;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 720px) {
+    /*changes reflects on screen with a width of 720px and below*/
+    body {
+        max-width: 720px;
+    }
+
+    nav.nav-link {
+        display: block;
+        flex-direction: row;
+        padding: 0 1.625rem;
+        max-width: 720px;
+        flex:0 0 100;
+    }
+
+    .navigation {
+        display: contents;
+        font-size: 85%;
+        text-decoration: none;
+    }
+
+    .hero {
+        margin-top: 3rem;
+        margin-left: 23rem;
+        flex-direction: row;
+    }
+    
+    .hero img {
+        margin-left: -20rem ;
+        height: 80%;
+        width: 100%;
+    }
+    
+    .bio {
+        margin-top: 11rem;
+    }
+
+    .projects-container {
+        flex-direction: column;
+        margin-left: 8.5rem;
+    }
+    
+    .project-card {
+        width:300%;
+    }
+
+    .contact {
+        position: relative;
+        max-height: 10rem;
+        top:0;
+        /* width: fit-content; */
+        margin-bottom: 1rem;
+        font-size: large;
+    }
+}
+
+@media screen and (max-width: 420px) {
+
+    .hero {
+        margin-top: 3rem;
+        margin-left: 23rem;
+        flex-direction: column;
+    }
+
+    .hero img {
+        margin: 10rem 5rem 2rem;
+        width: 1000%;
+    }
+  
+    .bio {
+        margin-top: auto;
+        width: 50rem;
+    }
+  
+    .project-container {
+        flex-direction: column;
+        
+    }
+
+    .project-card {
+        width:40rem;
+        margin-left: -3rem;
+    }
+  
+    .contact-form-container {
+      max-width: 17.75rem;
+    }
+} 
